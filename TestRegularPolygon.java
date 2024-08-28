@@ -33,17 +33,17 @@ class RegularPolygon {
     private double y = 0; // Degault y-coordinate of polygon's center
 
     //* Construct a regular polygon with the default values */
-    RegularPolygon() {
+    public RegularPolygon() {
     }
 
     //* Construct a regualr polygon with the given sides and length of side, centered at (0,0) */
-    RegularPolygon(int newN, double newSide) {
+    public RegularPolygon(int newN, double newSide) {
         n = newN;
         side = newSide;
     }
 
     //* Construct a regular polygon with the given sides, length of side, x- and y-coordinates */
-    RegularPolygon(int newN, double newSide, double newX, double newY) {
+    public RegularPolygon(int newN, double newSide, double newX, double newY) {
         n = newN;
         side = newSide; 
         x = newX;
@@ -51,58 +51,58 @@ class RegularPolygon {
     }
 
     //* Get the number of sides */
-    int getSides() {
+     public int getSides() {
         return n;
     }  
     
     //* Get length of sides */
-    double getLength() {
+    public double getLength() {
         return side;
     }
 
     //* Get x-coordinate */
-    double getX() {
+    public double getX() {
         return x;
     }
 
     //* Get y-coordinate */
-    double getY() {
+    public double getY() {
         return y;
     }
 
-    //* Set new number of sides */
-    void setSides(int newSide) {
-        n = newSide;
+    //* Set new number of sides n */
+    public void setN(int newN) {
+        n = newN;
     }
 
     //* Set new side length */ 
-    void setLength(double newSide) {
+    public void setSide(double newSide) {
         side = newSide;
     }
 
     //* Set new x-coordinate */
-    void setX(double newX) {
+    public void setX(double newX) {
         x = newX;
     }
 
     //* Set new y-coordinate */
-    void setY(double newY) {
+    public void setY(double newY) {
         y = newY;
     }
 
     //* Get the perimeter */ 
-    double getPerimeter() {
+    public double getPerimeter() {
         return n * side;
     }
 
     //* Get the area */
-    double getArea() {
+    public double getArea() {
         double area = (n * side * side) / (4 * Math.tan(Math.PI / n));
         return area;
     }   
     
     // Print polygon perimeter and area
-    void printPolygon() {
+    public void printPolygon() {
         System.out.printf("A polygon with %d sides of length %.0f has a perimeter of %.2f and an area of %.2f \n", n, side, getPerimeter(), getArea());
     }
 }
